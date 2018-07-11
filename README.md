@@ -1,18 +1,24 @@
-# Rabobank Front end assignment
+# Introduction
+This application is written in Javascript/Angular JS to read the input file (issues) and display them in a table format in screen.
+Also provide an option to filter on minimal issue count
 
-It uses :
+
+# Language/tools/framework used:
 
 * AngularJs
 * Angular UI Router
 * Twitter Bootstrap (CSS)
 * Font Awesome
 
-## Structure
+# Application Structure
 
 This project uses `gulp` to build and `bower` for frontend dependencies.
 
 All the sources are in the `src/` directory. When serving, are files are available in the `dist/` directory.
 
+# GitHub Location 
+
+https://github.com/wa0011048/RabobankFrontEnd
 
 ## Documentation
 
