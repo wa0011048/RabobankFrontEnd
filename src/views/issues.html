@@ -1,0 +1,45 @@
+<span class="btn btn-success btn-file pull-right">
+    <i class="fa fa-upload"></i> Browse
+    <input type="file" file-reader="Issues.fileContent" validate-fn="Issues.isValidIssues(arg1)">
+</span>
+
+<h1><i class="fa fa-bug"></i> Issues</h1>
+
+<div class="form-group" ng-if="Issues.validIssues">
+    <div class="input-group">
+        <div class="input-group-addon"><i class="fa fa-filter"></i> Minimum issues</div>
+        <input type="number" ng-model="Issues.issuesMinimum" class="form-control">
+    </div>
+</div>
+
+<span class="pull-right arrow" ng-if="!Issues.fileContent">
+    <img src="img/arrow.png" alt="">
+    <span>Please select a file</span>
+</span>
+
+<div class="alert alert-danger" role="alert" ng-if="Issues.fileContent && !Issues.validIssues">
+    <i class="fa fa-exclamation-circle"></i>
+    <strong>Error:</strong> The selected file is not a valid issues file. Please choose a valid issues file.
+</div>
+
+<div class="table-responsive" ng-if="Issues.validIssues">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>First name</th>
+                <th>Surname</th>
+                <th>Issues count</th>
+                <th>Date of Birth</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr ng-repeat="issue in Issues.fileContent | filter: Issues.greaterThan('issue_count', Issues.issuesMinimum)">
+                <td ng-bind="issue.first_name"></td>
+                <td ng-bind="issue.sur_name"></td>
+                <td ng-bind="issue.issue_count"></td>
+                <td ng-bind="(issue.date_of_birth | date)"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

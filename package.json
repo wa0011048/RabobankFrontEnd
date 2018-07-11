@@ -1,0 +1,40 @@
+{
+  "name": "rabobank-assignment",
+  "version": "0.0.1",
+  "description": "Angular and gulp assignment for Rabobank",
+  "author": "Winston C",
+  "devDependencies": {
+    "bower": "latest",
+    "gulp": "^3.9.1",
+    "gulp-add-src": "latest",
+    "gulp-batch": "latest",
+    "gulp-clean": "latest",
+    "gulp-concat": "latest",
+    "gulp-connect": "latest",
+    "gulp-debug": "latest",
+    "gulp-html-replace": "latest",
+    "gulp-if": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-jshint": "latest",
+    "gulp-karma": "latest",
+    "gulp-livereload": "latest",
+    "gulp-minify-css": "latest",
+    "gulp-minify-html": "latest",
+    "gulp-ng-annotate": "latest",
+    "gulp-protractor": "latest",
+    "gulp-uglify": "latest",
+    "gulp-watch": "latest",
+    "jasmine-core": "latest",
+    "karma": "latest",
+    "karma-chrome-launcher": "latest",
+    "karma-jasmine": "latest",
+    "protractor": "latest",
+    "yargs": "latest"
+  },
+  "scripts": {
+    "postinstall": "npm run bower-install & npm run protactor-webdriver",
+    "bower-install": "bower install",
+    "protactor-webdriver": "gulp webdriver_update"
+  },
+  "dependencies": {}
+}
